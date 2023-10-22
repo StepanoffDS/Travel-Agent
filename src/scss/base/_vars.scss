@@ -1,0 +1,15 @@
+$container-width: 1230px;
+$container-padding: 15px;
+
+$font-main: 'Circular Std', 'Times New Roman', sans-serif;
+
+$page-bg: #fff;
+$color-white: #fff;
+$text-color: #181818;
+$text-muted: #909090;
+$color-accent: #35AFF4;
+
+.dark {
+  --page-bg: #252526;
+  --text-color: #fff;
+}

@@ -1,0 +1,160 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $page-bg;
+  color: $text-color;
+  font-family: $font-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+}
+
+a {
+  font-family: $font-main;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  transition: color 0.2s ease-in;
+  /* 24px */
+
+  a:hover {
+    color: $color-accent;
+  }
+}
+
+i {
+  font-style: normal;
+}
+
+.title-1 {
+  color: $text-color;
+  font-family: $font-main;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  &--decor {
+    position: relative;
+  }
+
+  &--decor::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 268px;
+    height: 24px;
+
+    z-index: -1;
+
+    background-image: url("./../../img/discover/underline.svg");
+    background-repeat: no-repeat;
+
+    @include mediaMobile {
+      width: 184px;
+      height: 12px;
+      background-size: contain;
+      bottom: -8px;
+    }
+
+  }
+
+  @include mediaTablet {
+    font-size: 52px;
+  }
+
+  @include mediaMobile {
+    font-size: 32px;
+  }
+
+  @include mediaExtraMobile {
+    font-size: 26px;
+  }
+}
+
+.title-2 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  /* 48px */
+  text-transform: capitalize;
+
+  @include mediaLaptop {
+    font-size: 32px;
+  }
+}
+
+.title-3 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+
+  @include mediaMobile {
+    font-size: 28px;
+  }
+}
+
+.text {
+  color: $text-muted;
+  font-family: $font-main;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  p+p {
+    margin-top: 1em;
+  }
+
+  @include mediaMobile {
+    font-size: 16px;
+  }
+}
+
+.line {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: flex;
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background-color: $text-muted;
+
+    @include mediaMobile {
+      display: none;
+    }
+
+  }
+
+
+  @include mediaMobile {
+    display: none;
+  }
+}
+
+.accent {
+  color: $color-accent;
+}
+
+.muted {
+  color: $text-muted;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
